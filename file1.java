@@ -1,3 +1,5 @@
-int a = 19;
-System.out.println("Hello Harshita");
-System.out.print(a);
+class Simple{  
+    public static void main(String args[]){  
+     System.out.println("Hello Java");  
+    }  
+}  
