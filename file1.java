@@ -1,5 +1,7 @@
 class Simple{  
     public static void main(String args[]){  
-     System.out.println("Hello Java");  
+     int a = 6;
+     String b = 'Hello Dolly';
+     System.out.println(a+b);  
     }  
 }
