@@ -3,5 +3,6 @@ class Simple{
      int a = 6;
      String b = "Hello Dolly";
      System.out.println(a+" "+b);  
+     System.out.println(a);
     }  
 }
