@@ -3,9 +3,12 @@ pipeline{
   stages{
     stage('Stage1'){
       steps{
-      powershell 'javac file1.java'
-      powershell 'java Simple'
+          dir('C:\\Program Files\\Java\\jdk1.8.0_121\\bin') {
+              pwd()
+              bat '''javac file1.java
+java Simple'''
       }
   }
+}
 }
 }
