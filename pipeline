@@ -3,8 +3,8 @@ pipeline{
   stages{
     stage('Stage1'){
       steps{
-      powershell '''javac file1.java
-      java Simple'''
+      powershell 'javac file1.java'
+      powershell 'java Simple'
       }
   }
 }
