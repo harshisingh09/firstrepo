@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Example Deploy') {
             when {
-                param.envi == 'prod'
+                params.envi == 'prod'
             }
             steps {
                 echo 'Deploying'
@@ -16,7 +16,7 @@ pipeline {
        }
        stage('Example building') {
             when {
-                param.envi == 'dev'
+                params.envi == 'dev'
             }
             steps {
                 echo 'building'
@@ -24,7 +24,7 @@ pipeline {
        }
        stage('Example testing') {
             when {
-                param.envi == 'qa'
+                params.envi == 'qa'
             }
             steps {
                 echo 'testing'
