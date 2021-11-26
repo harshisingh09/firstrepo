@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Example building'){
             when {
-                branch 'Dev'
+                branch 'main'
             }
             steps{
                 echo 'Build in progress'
