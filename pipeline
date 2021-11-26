@@ -1,29 +1,34 @@
 pipeline {
     agent any
+    parameters{
+      choice(
+        choices: ['qa' , 'prod' , 'dev'],
+        name: 'envi')
+    }
     stages {
         stage('Example Deploy') {
             when {
-                branch 'production'
+                param.envi == 'prod'
             }
             steps {
                 echo 'Deploying'
             }
-        }
-        stage('Example Testing'){
+       }
+       stage('Example building') {
             when {
-                branch 'qa'
+                param.envi == 'dev'
             }
-            steps{
-                echo 'Testing in progress'
-            }
-        }
-        stage('Example building'){
-            when {
-                branch 'main'
-            }
-            steps{
-                echo 'Build in progress'
+            steps {
+                echo 'building'
             }
        }
-    }
-}
+       stage('Example testing') {
+            when {
+                param.envi == 'qa'
+            }
+            steps {
+                echo 'testing'
+            }
+       }
+   }
+} 
